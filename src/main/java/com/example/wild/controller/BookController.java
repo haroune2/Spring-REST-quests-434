@@ -13,6 +13,7 @@ import com.example.wild.entities.Book;
 import com.example.wild.repositories.BookRepository;
 
 @RestController
+
 public class BookController {
     @Autowired
     BookRepository bookRepository;
@@ -29,7 +30,6 @@ public class BookController {
 
     // CREATE
     @PostMapping("/blogs")
-
     public Book create(@RequestBody Book book) {
         return bookRepository.save(book);
     }
